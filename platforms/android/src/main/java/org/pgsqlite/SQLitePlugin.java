@@ -8,7 +8,6 @@
 package org.pgsqlite;
 
 import android.annotation.SuppressLint;
-import net.sqlcipher.Cursor;
 import android.database.Cursor;
 import net.zetetic.database.sqlcipher.SQLiteCursor;
 import net.zetetic.database.sqlcipher.SQLiteDatabase;
