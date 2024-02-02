@@ -9,10 +9,11 @@ package org.pgsqlite;
 
 import android.annotation.SuppressLint;
 import net.sqlcipher.Cursor;
-import net.sqlcipher.database.SQLiteCursor;
-import net.sqlcipher.database.SQLiteDatabase;
-import net.sqlcipher.database.SQLiteException;
-import net.sqlcipher.database.SQLiteStatement;
+import android.database.Cursor;
+import net.zetetic.database.sqlcipher.SQLiteCursor;
+import net.zetetic.database.sqlcipher.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import net.zetetic.database.sqlcipher.SQLiteStatement;
 import android.content.Context;
 import android.util.Base64;
 
@@ -412,8 +413,13 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
 
             FLog.v(TAG, "DB file is ready, proceeding to OPEN SQLite DB: " + dbfile.getAbsolutePath());
 
-            SQLiteDatabase mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), key, null, openFlags);
-
+            SQLiteDatabase mydb = SQLiteDatabase.openDatabase(
+                    dbfile.getAbsolutePath(),
+                    key,
+                    null,
+                    openFlags,
+                    null
+            );
             if (cbc != null)
                 cbc.success("Database opened");
 
