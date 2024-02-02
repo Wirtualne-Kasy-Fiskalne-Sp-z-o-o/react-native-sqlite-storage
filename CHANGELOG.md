@@ -1,4 +1,9 @@
 # Version History
+
+v5.0.1
+ 1. Sqlcipher updated to 4.5.6@aar - fixing https://github.com/sqlcipher/sqlcipher/commit/fbb0f4358dec3a73c57032010212bc6782528fc6
+
+
 v5.0.0
  1. Change RN to Google Maven (https://github.com/andpor/react-native-sqlite-storage/pull/405)
  2. Native Android with JSON1 support (https://github.com/andpor/react-native-sqlite-storage/pull/392)
